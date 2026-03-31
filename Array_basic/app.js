@@ -139,3 +139,20 @@
 
 // }
 // console.log(dublicate)
+
+// let arr = [3, 1, 5, 2, 4];
+
+// let largest = -Infinity;
+// let secLargest = -Infinity;
+
+// for(let i = 0; i < arr.length; i++){
+//   if(arr[i] > largest){
+//     secLargest = largest;  // step 1: purana largest → second
+//     largest = arr[i];      // step 2: naya element → largest
+//   } else if(arr[i] > secLargest && arr[i] !== largest){
+//     secLargest = arr[i];   // sirf second update karo
+//   }
+// }
+
+// console.log("Largest:", largest);       // 5
+// console.log("Second Largest:", secLargest); // 4
