@@ -1,16 +1,15 @@
 //Question :Find duplicate element
 
-let arr = [2,3,4,4,6,5,2,5];
-let dublicate = []
+let arr = [1,1,2,2,3,3];
+
+let count = 0;
 for(let i = 0; i < arr.length; i++){
 
-    for(let j = i+1; j < arr.length; j++){
-
-        if(arr[i] == arr[j]){
-            dublicate.push(arr[j])
-        }
-
+    let k = arr[i];
+    if(k != arr[i]){
+        arr[i] = arr[k];
+        k++
     }
 
 }
-console.log(dublicate)
+console.log(arr,k)
