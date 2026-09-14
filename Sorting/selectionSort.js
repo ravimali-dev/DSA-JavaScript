@@ -1,25 +1,15 @@
-class Solution {
-    selectionSort(nums) {
-        for (let i = 0; i < nums.length - 1; i++) {
-            let minIndex = i;
+let arr = [5, 2, 8, 1, 9];
 
-            for (let j = i + 1; j < nums.length; j++) {
-                if (nums[minIndex] > nums[j]) {
-                    minIndex = j;
-                }
-            }
-
-            let temp = nums[i];
-            nums[i] = nums[minIndex];
-            nums[minIndex] = temp;
+for(let i=0; i<arr.length; i++){
+    let minindex = i;
+    for(let j=i+1; j<arr.length; j++){
+        if(arr[j] < arr[minindex]){
+            minindex = j;
         }
-
-        return nums;
+        
     }
+    let temp = arr[i];
+        arr[i] = arr[minindex];
+        arr[minindex] = temp
 }
-
-const solution = new Solution();
-
-let nums = [5, 2, 4, 3, 1];
-
-console.log(solution.selectionSort(nums));
+console.log(arr)
