@@ -10,3 +10,13 @@ for(let i=1; i<arr.length; i++){
     }
 }
 console.log(arr)
+
+// for (i = 1; i < n; i++) {
+//   key = arr[i];
+//   j = i - 1;
+//   while (j >= 0 && arr[j] > key) {
+//     arr[j+1] = arr[j];  // shift right, swap nahi
+//     j--;
+//   }
+//   arr[j+1] = key;  // key ko sahi jagah rakho
+// }
