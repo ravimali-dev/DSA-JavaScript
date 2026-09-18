@@ -75,10 +75,10 @@ function mergeSort(arr, low, high ){
 
 function merge(arr, low, mid, high){
     let temp = [];
-    let i = 0;
+    let i = low;
     let j = mid + 1;
     
-    while(i < mid && j < high){
+    while(i <= mid && j <= high){
         if(arr[i] < arr[j]){
             temp.push(arr[i]);
             i++
@@ -87,12 +87,18 @@ function merge(arr, low, mid, high){
             j++
         }
     }
-    while (i < mid) {
+    while (i <= mid) {
       temp.push(arr[i]);
             i++
  }
- while (j < high) {
+ while (j <= high) {
       temp.push(arr[j]);
             j++
  }
+ for(let k=0; k<temp.length; k++){
+    arr[low + k] = temp[k]
+ }
 }
+
+mergeSort(arr, low, high)
+console.log(arr)
