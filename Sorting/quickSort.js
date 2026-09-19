@@ -1,7 +1,6 @@
 function partition(arr, low, high) {
-    let pivot = arr[high];          // har call mein naya pivot
-    let i = low;                    // pehla chhota yahan baithega
-
+    let pivot = arr[high];
+    let i = low;
     for (let j = low; j < high; j++) {
         if (arr[j] < pivot) {
             let temp = arr[j];
@@ -10,22 +9,20 @@ function partition(arr, low, high) {
             i++;
         }
     }
-
-    let temp = arr[i];              // pivot ko i pe baithao
+    let temp = arr[i];
     arr[i] = arr[high];
     arr[high] = temp;
-
-    return i;                       // pivot ka index
+    return i;
 }
 
 function quickSort(arr, low, high) {
-    if (low >= high) return;        // base case
-
+    console.log("call: low =", low, "high =", high);
+    if (low >= high) return;
     let p = partition(arr, low, high);
-    quickSort(arr, low, p - 1);     // left
-    quickSort(arr, p + 1, high);    // right
+    quickSort(arr, low, p - 1);
+    quickSort(arr, p + 1, high);
 }
 
 let arr = [5, 6, 2, 3, 9, 4];
 quickSort(arr, 0, arr.length - 1);
-console.log(arr);                   // [2, 3, 4, 5, 6, 9]
+console.log(arr);
